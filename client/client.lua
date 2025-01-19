@@ -4,17 +4,34 @@
 
 CreateThread(function()
     local bones = {'wheel_lf', 'wheel_rf', 'wheel_lm1', 'wheel_rm1', 'wheel_lm2', 'wheel_rm2', 'wheel_lm3', 'wheel_rm3', 'wheel_lr', 'wheel_rr'}
-    exports[Config.TargetSystem]:AddTargetBone(bones, {
-        options = {
+
+    local event = 'wasabi_tireslash:slash'
+    local icon = 'fas fa-info'
+    local distance = 1.0
+
+    if Config.TargetSystem == 'ox_target' then
+        exports.ox_target:addGlobalVehicle({
             {
-                event = 'wasabi_tireslash:slash',
-                icon = 'fas fa-info',
-                label = 'Slash Tire',
-                num = 1
+                bones = bones,
+                event = event,
+                icon = icon,
+                label = Language['slash_tire'],
+                distance = distance
+            }
+        })
+    else
+        exports[Config.TargetSystem]:AddTargetBone(bones, {
+            options = {
+                {
+                    event = event,
+                    icon = icon,
+                    label = Language['slash_tire'],
+                    num = 1
+                },
             },
-        },
-        distance = 1
-    })
+            distance = distance
+        })
+    end
 end)
 
 RegisterNetEvent('wasabi_tireslash:slash', function()

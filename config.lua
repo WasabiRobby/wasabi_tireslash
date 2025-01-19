@@ -6,7 +6,7 @@ Config = {}
 
 Config.checkForUpdates = true -- Check for Updates?
 
-Config.TargetSystem = 'qtarget' -- Choices confirmed working are currently 'qtarget' and 'qb-target'
+Config.TargetSystem = 'qtarget' -- Choices confirmed working are currently 'qtarget', 'qb-target' and 'ox_target'
 
 Config.allowedWeapons = {
     `WEAPON_KNIFE`,
@@ -26,5 +26,6 @@ end)
 Language = {
     ['no_weapon'] = 'You need to be holding something sharp to do this!',
     ['car_slashed'] = 'Someone slashed your tire!',
-    ['already_slashed'] = 'This tire has already been flattened!'
+    ['already_slashed'] = 'This tire has already been flattened!',
+    ['slash_tire'] = 'Slash Tire'
 }

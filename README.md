@@ -3,7 +3,7 @@
 This resource was created as a free target based tire slash.
 
 <b>Features:</b>
-- Target based(Supports qtarget as well as qb-target)
+- Target based (Supports qtarget, qb-target and ox_target)
 - Animations and weapon check
 - Standalone
 - 0.00ms usage
